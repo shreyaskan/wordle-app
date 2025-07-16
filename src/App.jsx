@@ -38,7 +38,6 @@ export default function App() {
         <div className='bg-[#2f3c7e] text-center rounded-2xl my-20 mx:0 md:mx-10 px-0 md:px-10 min-w-[80%] md:min-w-[50%] min-h-[80vh] flex flex-col justify-evenly  items-center hover:shadow-[0_10px_20px_rgba(0,0,0,1)] hover:duration-1000'>
           <h1 className="text-5xl mt-10">
             WORDLE
-            {wordleWord}
           </h1>
           <section>
             {!firstPageFadeOut && (
