@@ -1,9 +1,5 @@
 import { useState, useRef } from 'react';
 
-// certain words are invalid - the API endpoint isn't correct (eg. TOUCH)
-// backspace 
-// if a letter is green and that letter is repeated again later, the letter will show yellow, it should be grey
-
 export default function InputRow({ wordleWord, externalFocusRef = null, inputRef = null, setWin, setLoss, isLastRow = false, setActiveRow, activeRow, rowIndex }) {
 
     const fallbackRef = useRef(null);
@@ -101,12 +97,9 @@ export default function InputRow({ wordleWord, externalFocusRef = null, inputRef
                     disabled={!isActiveRow}
                     ref={input1}
                     onChange={(e) => handleChange(e, input2)}
-                    className={`
-                        rounded-xl w-[50px] h-[50px] mx-1 md:mx-2 my-4
-                        text-center text-xl uppercase
-                        ${boxColours?.[0] ? `bg-[${boxColours[0]}]` : "bg-[whitesmoke]"}
-                      `}
-                />
+                    className="rounded-xl w-[50px] h-[50px] mx-1 md:mx-2 my-4
+             text-center text-xl uppercase"
+                    style={{ backgroundColor: boxColours[0] || 'whitesmoke' }} />
                 <input
                     type='text'
                     maxLength={1}
@@ -118,11 +111,9 @@ export default function InputRow({ wordleWord, externalFocusRef = null, inputRef
                         }
                     }}
                     onChange={(e) => handleChange(e, input3)}
-                    className={`
-                        rounded-xl w-[50px] h-[50px] mx-1 md:mx-2 my-4
-                        text-center text-xl uppercase
-                        ${boxColours?.[1] ? `bg-[${boxColours[1]}]` : "bg-[whitesmoke]"}
-                      `} />
+                    className="rounded-xl w-[50px] h-[50px] mx-1 md:mx-2 my-4
+             text-center text-xl uppercase"
+                    style={{ backgroundColor: boxColours[1] || 'whitesmoke' }} />
 
                 <input
                     type='text'
@@ -135,11 +126,9 @@ export default function InputRow({ wordleWord, externalFocusRef = null, inputRef
                         }
                     }}
                     onChange={(e) => handleChange(e, input4)}
-                    className={`
-                        rounded-xl w-[50px] h-[50px] mx-1 md:mx-2 my-4
-                        text-center text-xl uppercase
-                        ${boxColours?.[2] ? `bg-[${boxColours[2]}]` : "bg-[whitesmoke]"}
-                      `} />
+                    className="rounded-xl w-[50px] h-[50px] mx-1 md:mx-2 my-4
+             text-center text-xl uppercase"
+                    style={{ backgroundColor: boxColours[2] || 'whitesmoke' }} />
 
                 <input
                     type='text'
@@ -152,11 +141,9 @@ export default function InputRow({ wordleWord, externalFocusRef = null, inputRef
                         }
                     }}
                     onChange={(e) => handleChange(e, input5)}
-                    className={`
-                        rounded-xl w-[50px] h-[50px] mx-1 md:mx-2 my-4
-                        text-center text-xl uppercase
-                        ${boxColours?.[3] ? `bg-[${boxColours[3]}]` : "bg-[whitesmoke]"}
-                      `} />
+                    className="rounded-xl w-[50px] h-[50px] mx-1 md:mx-2 my-4
+             text-center text-xl uppercase"
+                    style={{ backgroundColor: boxColours[3] || 'whitesmoke' }} />
 
                 <input
                     type='text'
@@ -175,11 +162,9 @@ export default function InputRow({ wordleWord, externalFocusRef = null, inputRef
                         }
                     }}
                     onChange={(e) => handleChange(e, input5)}
-                    className={`
-                        rounded-xl w-[50px] h-[50px] mx-1 md:mx-2 my-4
-                        text-center text-xl uppercase
-                        ${boxColours?.[4] ? `bg-[${boxColours[4]}]` : "bg-[whitesmoke]"}
-                      `} />
+                    className="rounded-xl w-[50px] h-[50px] mx-1 md:mx-2 my-4
+             text-center text-xl uppercase"
+                    style={{ backgroundColor: boxColours[4] || 'whitesmoke' }} />
             </div>
 
             {!wordCheck && (
